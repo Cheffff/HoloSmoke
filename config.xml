@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.ezartech.demo.cities" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>citiesAR</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <engine name="android" spec="^6.2.3" />
+    <plugin name="com.ezartech.ezar.snapshot" spec="/dev/ezar/plugins/com.ezartech.ezar.snapshot" />
+    <plugin name="com.ezartech.ezar.videooverlay" spec="/dev/ezar/plugins/com.ezartech.ezar.videoOverlay" />
+    <plugin name="cordova-plugin-device-motion" spec="~1.2.2" />
+    <plugin name="cordova-plugin-device-orientation" spec="~1.0.4" />
+    <plugin name="cordova-plugin-geolocation" spec="~2.3.0" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <plugin name="cordova-plugin-ezar-videooverlay" spec="^1.0.0" />
+    <plugin name="cordova-plugin-ezar-snapshot" spec="^1.0.0" />
+    <plugin name="cordova-plugin-googlemaps" spec="^2.1.1">
+        <variable name="API_KEY_FOR_ANDROID" value="AIzaSyC8ZX0bH754Ldf5yWa6Ui8yvBYyh55BXMI" />
+    </plugin>
+</widget>

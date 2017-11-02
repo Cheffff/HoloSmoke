@@ -1,0 +1,38 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.ezartech.demo.cities"
+    },
+    "cordova-plugin-device-orientation": {
+      "PACKAGE_NAME": "com.ezartech.demo.cities"
+    },
+    "cordova-plugin-device-motion": {
+      "PACKAGE_NAME": "com.ezartech.demo.cities"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.ezartech.demo.cities"
+    },
+    "cordova-plugin-ezar-videooverlay": {
+      "PACKAGE_NAME": "com.ezartech.demo.cities"
+    },
+    "cordova-plugin-ezar-snapshot": {
+      "PACKAGE_NAME": "com.ezartech.demo.cities"
+    },
+    "cordova-plugin-googlemaps": {
+      "API_KEY_FOR_ANDROID": "AIzaSyC8ZX0bH754Ldf5yWa6Ui8yvBYyh55BXMI",
+      "PACKAGE_NAME": "com.ezartech.demo.cities"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "com.ezartech.demo.cities"
+    }
+  }
+}
