@@ -1,10 +1,10 @@
 <!doctype html>
 <html>
   <head>
-    <title>Nearby</title>
+    <title>HoloSmoke</title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="Copyright" content="&copy; 2013, Intel Corporation. All rights reserved." />
-    <meta name="Author" content="Rakshith Krishnappa" />
+    <meta name="Author" content="NAbil - Olivier - Aymeric - Epitech" />
 <!--
  * Copyright (c) 2013, Intel Corporation. All rights reserved.
  * Please see http://software.intel.com/html5/license/samples 
@@ -19,10 +19,8 @@
     <script src="lib/jquery/jquery-1.8.2.min.js"></script>
     <script src="cordova.js"></script>
     <script>
-var pin = [
 
-]; 
-
+var pin = []; 
 var markersArray = [], bounds;
 var myLat = 0, myLng = 0; 
 var bearing, distance;
@@ -39,6 +37,7 @@ function onDeviceReady() {
     // start cordova device sensors
     startAccelerometer();
     startCompass();
+    progress.show("Chargement...");
     startGeolocation();
 }
 function startCamera() {
@@ -64,7 +63,7 @@ function setupMap(){
     };
     map = new google.maps.Map(document.getElementById("map"), mapOptions);
 }        
-// toggle between list view and map view        
+
 function toggleView(){
     if($(".listView").is(":visible")){
         $(".listView").hide();
@@ -100,12 +99,14 @@ function loadData(){
     google.maps.event.trigger(map, "resize");
     dataStatus = "loaded";   
 }
+
 // add marker to map and in array        
 function addMarker(i){
 	var marker = new google.maps.Marker({position: new google.maps.LatLng(pin[i].lat, pin[i].lng), map: map, title: pin[i].name});
 	bounds.extend(new google.maps.LatLng(pin[i].lat, pin[i].lng));
 	markersArray.push(marker);
 } 
+
 // clear all markers from map and array        
 function clearMarkers() {
 	while (markersArray.length) {
@@ -128,7 +129,7 @@ function relativePosition(i){
     
     var a = Math.sin(dLat/2) * Math.sin(dLat/2) + Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2); 
     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
-    distance = 3958.76  * c;
+    distance = 6371010  * c;
     pin[i]['distance'] = distance;
 }
 // calculate direction of points and display        
@@ -152,7 +153,7 @@ function calculateDirection(degree){
                 fontSize = "30";
                 fontColor = "#eee";
             }
-            $("#spot").append('<div class="name" data-id="'+i+'" style="margin-left:'+(((pin[i].bearing - degree) * 5)+50)+'px;width:'+($(window).width()-100)+'px;font-size:'+fontSize+'px;color:'+fontColor+'">'+pin[i].name+'<div class="distance">'+ away +' miles away</div></div>');
+            $("#spot").append('<div class="name" data-id="'+i+'" style="margin-left:'+(((pin[i].bearing - degree) * 5)+50)+'px;width:'+($(window).width()-100)+'px;font-size:'+fontSize+'px;color:'+fontColor+'">'+pin[i].name+'<div class="distance">'+ away +' mètre(s) de distance</div></div>');
             detected = 1;
         } else {
             if(!detected){
@@ -182,40 +183,32 @@ function onGeoSuccess(position) {
     document.getElementById('geolocation').innerHTML = 'Latitude: ' + position.coords.latitude + '<br />' + 'Longitude: ' + position.coords.longitude;
     myLat = position.coords.latitude;
     myLng = position.coords.longitude;
-
     var latlng = new google.maps.LatLng(myLat, myLng);
     var request = {
         location: latlng,
         radius: '500',
         name: ['tabac']
     };
-
-
     var service = new google.maps.places.PlacesService(map);
     service.search(request, callback);
-
-
 }
 
 function callback(results, status) {
     // Modification du tableau
     if (status == google.maps.places.PlacesServiceStatus.OK) 
     {
+        pin = [];
         for (i = 0; i < results.length; i++)
             {
                 //var place = result[i];
                 var data = {"name" : "" + results[i].name + "", "lat" : "" + results[i].geometry.location.lat() + "", "lng" : "" + results[i].geometry.location.lng() + ""};
-
                 pin.push(data);
-                /*pin.name.push("toto");
-                pin.lat.push("48.866667");
-                pin.lng.push("2.333333");*/
-
             }
+//        if(!dataStatus){
+            progress.hide();
 
-    }
-    if(!dataStatus){
-        loadData();
+            loadData();
+  //      }
     }
 }
 
@@ -238,7 +231,7 @@ function stopCompass() {
 }
 // onSuccess: Get the current heading
 function onCompassSuccess(heading) {
-    var directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW', 'N'];
+    var directions = ['N', 'NE', 'E', 'SE', 'S', 'SO', 'O', 'NO', 'N'];
     var direction = directions[Math.abs(parseInt((heading.magneticHeading) / 45) + 1)];
     document.getElementById('compass').innerHTML = heading.magneticHeading + "<br>" + direction;
     document.getElementById('direction').innerHTML = direction;
@@ -344,9 +337,9 @@ body {background-color:transparent;font-family:Arial;margin:0;overflow-x:hidden;
   </head>
   <body id="body" style="background-color: transparent">  
     <div id="arView" style="background-color: transparent">
-        <div class="arMessage">&uarr;<br>Tilt down to see all places</div>
+        <div class="arMessage">&uarr;<br>Baissez votre téléphone pour voir tous les résultats</div>
         <br>
-        <div class="arMessage">&larr; Move the device around to find spots &rarr;</div>
+        <div class="arMessage">&larr; Tournez votre téléphone autour de vous &rarr;</div>
         <br>
         <div id="direction"></div>
         <br>
@@ -355,14 +348,14 @@ body {background-color:transparent;font-family:Arial;margin:0;overflow-x:hidden;
     		<img id="snapbtn" src="img/camera_btn.png">
     	</div>
          <div class="attributing">
-            ezAR Technologies
+            HoloSmoke
         </div>
     </div>
     <div id="topView" style="background-color: white">
         <div class="navbar">
             <!--<div id="actionbtn" class="navbtn"> &crarr; </div>-->
             <div id="viewbtn" class="navbtn" onclick="toggleView()">Map</div>    
-            <div class="navtitle">Nearby</div> 
+            <div class="navtitle">HoloSmoke</div> 
         </div>
         <div class="listView">
             <div class="listItems"></div>

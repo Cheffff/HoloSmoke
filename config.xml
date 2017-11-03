@@ -34,4 +34,5 @@
     <plugin name="cordova-plugin-googlemaps" spec="^2.1.1">
         <variable name="API_KEY_FOR_ANDROID" value="AIzaSyC8ZX0bH754Ldf5yWa6Ui8yvBYyh55BXMI" />
     </plugin>
+    <plugin name="cordova-plugin-progress" spec="^0.3.0" />
 </widget>

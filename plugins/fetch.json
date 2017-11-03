@@ -64,5 +64,13 @@
     "variables": {
       "API_KEY_FOR_ANDROID": "AIzaSyC8ZX0bH754Ldf5yWa6Ui8yvBYyh55BXMI"
     }
+  },
+  "cordova-plugin-progress": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-progress"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }

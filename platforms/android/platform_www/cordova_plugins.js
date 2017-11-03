@@ -247,6 +247,14 @@ module.exports = [
         "clobbers": [
             "plugin.google.maps"
         ]
+    },
+    {
+        "id": "cordova-plugin-progress.Progress",
+        "file": "plugins/cordova-plugin-progress/www/progress.js",
+        "pluginId": "cordova-plugin-progress",
+        "clobbers": [
+            "progress"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -259,7 +267,8 @@ module.exports.metadata =
     "cordova-plugin-geolocation": "2.3.0",
     "cordova-plugin-ezar-videooverlay": "1.0.0",
     "cordova-plugin-ezar-snapshot": "1.0.0",
-    "cordova-plugin-googlemaps": "2.1.1"
+    "cordova-plugin-googlemaps": "2.1.1",
+    "cordova-plugin-progress": "0.3.0"
 };
 // BOTTOM OF METADATA
 });

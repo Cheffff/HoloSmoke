@@ -17,7 +17,8 @@
       "cordova-plugin-ezar-snapshot": {},
       "cordova-plugin-googlemaps": {
         "API_KEY_FOR_ANDROID": "AIzaSyC8ZX0bH754Ldf5yWa6Ui8yvBYyh55BXMI"
-      }
+      },
+      "cordova-plugin-progress": {}
     }
   },
   "dependencies": {
@@ -30,6 +31,7 @@
     "cordova-plugin-ezar-videooverlay": "^1.0.0",
     "cordova-plugin-geolocation": "~2.3.0",
     "cordova-plugin-googlemaps": "^2.1.1",
+    "cordova-plugin-progress": "^0.3.0",
     "cordova-plugin-whitelist": "1"
   }
 }
