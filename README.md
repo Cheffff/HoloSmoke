@@ -46,7 +46,9 @@ npm install -g cordova
 ## Meta
 
 Nabil Abbach – [@NabilAbbach](https://twitter.com/dbader_org) – nabil.abbach@epitech.eu
+
 Olivier laffon - [@iLLoDev](https://twitter.com/dbader_org) - olivier.laffon@epitech.eu
+
 Aymeric Gand - aymeric.gand@epitech.eu
 
 
