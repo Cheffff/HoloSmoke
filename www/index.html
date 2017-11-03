@@ -37,7 +37,7 @@ function onDeviceReady() {
     // start cordova device sensors
     startAccelerometer();
     startCompass();
-    progress.show("Chargement...");
+    progress.show("Chargement...");// fenetre de chargement
     startGeolocation();
 }
 function startCamera() {
@@ -204,11 +204,9 @@ function callback(results, status) {
                 var data = {"name" : "" + results[i].name + "", "lat" : "" + results[i].geometry.location.lat() + "", "lng" : "" + results[i].geometry.location.lng() + ""};
                 pin.push(data);
             }
-//        if(!dataStatus){
-            progress.hide();
-
             loadData();
-  //      }
+            progress.hide(); // Fermetur fenetre de chargement
+
     }
 }
 
