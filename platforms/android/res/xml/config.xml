@@ -58,6 +58,9 @@
     <feature name="MarkerCluster">
         <param name="android-package" value="plugin.google.maps.PluginMarkerCluster" />
     </feature>
+    <feature name="PDialog">
+        <param name="android-package" value="io.github.pwlin.cordova.plugins.pdialog.PDialog" />
+    </feature>
     <name>citiesAR</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.

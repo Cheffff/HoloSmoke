@@ -249,11 +249,11 @@ module.exports = [
         ]
     },
     {
-        "id": "cordova-plugin-progress.Progress",
-        "file": "plugins/cordova-plugin-progress/www/progress.js",
-        "pluginId": "cordova-plugin-progress",
+        "id": "cordova-plugin-pdialog.PDialog",
+        "file": "plugins/cordova-plugin-pdialog/www/plugins.PDialog.js",
+        "pluginId": "cordova-plugin-pdialog",
         "clobbers": [
-            "progress"
+            "cordova.plugin.pDialog"
         ]
     }
 ];
@@ -268,7 +268,7 @@ module.exports.metadata =
     "cordova-plugin-ezar-videooverlay": "1.0.0",
     "cordova-plugin-ezar-snapshot": "1.0.0",
     "cordova-plugin-googlemaps": "2.1.1",
-    "cordova-plugin-progress": "0.3.0"
+    "cordova-plugin-pdialog": "2.0.1"
 };
 // BOTTOM OF METADATA
 });
