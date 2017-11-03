@@ -5,7 +5,7 @@
 [![Downloads Stats][npm-downloads]][npm-url]
 
 
-![](header.png)
+![](header.jpg)
 
 ## Installation
 
