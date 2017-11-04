@@ -31,6 +31,9 @@
     },
     "cordova-plugin-pdialog": {
       "PACKAGE_NAME": "com.ezartech.demo.cities"
+    },
+    "cordova-plugin-progress": {
+      "PACKAGE_NAME": "com.ezartech.demo.cities"
     }
   },
   "dependent_plugins": {

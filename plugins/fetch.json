@@ -68,7 +68,7 @@
   "cordova-plugin-progress": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-progress"
+      "id": "cordova-plugin-progress@^0.3.0"
     },
     "is_top_level": true,
     "variables": {}
