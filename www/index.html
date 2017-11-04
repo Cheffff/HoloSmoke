@@ -219,6 +219,7 @@
             // Modification du tableau
             if (status == google.maps.places.PlacesServiceStatus.OK) {
                 pin = [];
+                $(".listItems").html("");
                 for (i = 0; i < results.length; i++) {
                     //var place = result[i];
                     var data = { "name": "" + results[i].name + "", "lat": "" + results[i].geometry.location.lat() + "", "lng": "" + results[i].geometry.location.lng() + "" };
