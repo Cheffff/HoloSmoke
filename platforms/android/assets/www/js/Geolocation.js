@@ -24,11 +24,10 @@ function onGeoSuccess(position) {
     latlng = new google.maps.LatLng(myLat, myLng);
     cordova.plugin.pDialog.setProgress(60);
 
-    //range = 800;
     StartData();
 }
 
 // onError: Failed to get the location
-function onGeoError() {
-    document.getElementById('log').innerHTML += "onError=.";
+function onGeoError(GeoError) {
+    document.getElementById('log').innerHTML += "onError=." + GeoError.code;
 }

@@ -1,22 +1,4 @@
-﻿/*function toggleView() {
-    if ($(".listView").is(":visible")) {
-        $(".listView").hide();       
-        $("#map").height($(window).height() - 60);
-        $(".mapView").fadeIn(
-            function () {
-                google.maps.event.trigger(map, "resize");
-                map.fitBounds(bounds);
-            });
-        $("#viewbtn").html("List");
-    } else {
-        $(".mapView").hide();
-        $(".listView").fadeIn();
-        $("#viewbtn").html("Map");
-    }
-}*/
-
-
-function toggleView() {
+﻿function toggleView() {
     if ($(".listView").is(":visible")) {
         $(".listView").hide();
         $(".SetupView").hide();
@@ -44,6 +26,5 @@ function toggleView() {
 
 function radius() {
     var x = document.getElementById("myRange").value;
-   // document.getElementById("demo").innerHTML = Math.round(x);
-   range = Math.round(x);
+    range = Math.round(x);
 }
