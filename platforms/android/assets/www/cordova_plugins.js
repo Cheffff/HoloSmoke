@@ -263,6 +263,14 @@ module.exports = [
         "clobbers": [
             "progress"
         ]
+    },
+    {
+        "id": "cordova-plugin-splashscreen.SplashScreen",
+        "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+        "pluginId": "cordova-plugin-splashscreen",
+        "clobbers": [
+            "navigator.splashscreen"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -277,7 +285,8 @@ module.exports.metadata =
     "cordova-plugin-ezar-snapshot": "1.0.0",
     "cordova-plugin-googlemaps": "2.1.1",
     "cordova-plugin-pdialog": "2.0.1",
-    "cordova-plugin-progress": "0.3.0"
+    "cordova-plugin-progress": "0.3.0",
+    "cordova-plugin-splashscreen": "4.0.3"
 };
 // BOTTOM OF METADATA
 });

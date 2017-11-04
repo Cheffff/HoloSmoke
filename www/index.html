@@ -40,8 +40,16 @@
         $(document).ready(function () {
             document.addEventListener("deviceready", onDeviceReady, false);
         });
-        // start device compass, accelerometer and geolocation after deviceready
+
         function onDeviceReady() {
+            navigator.splashscreen.show();
+            window.setTimeout(LoadApplication, 3000 - 750);
+        }
+
+        // start device, compass, accelerometer and geolocation
+        function LoadApplication() {
+            navigator.splashscreen.hide();
+
             //fenetre de chargement
             cordova.plugin.pDialog.init({
                 theme: 'HOLO_DARK',

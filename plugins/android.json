@@ -34,6 +34,9 @@
     },
     "cordova-plugin-progress": {
       "PACKAGE_NAME": "com.ezartech.demo.cities"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.ezartech.demo.cities"
     }
   },
   "dependent_plugins": {

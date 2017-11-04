@@ -19,7 +19,8 @@
         "API_KEY_FOR_ANDROID": "AIzaSyC8ZX0bH754Ldf5yWa6Ui8yvBYyh55BXMI"
       },
       "cordova-plugin-progress": {},
-      "cordova-plugin-pdialog": {}
+      "cordova-plugin-pdialog": {},
+      "cordova-plugin-splashscreen": {}
     }
   },
   "dependencies": {
@@ -34,6 +35,7 @@
     "cordova-plugin-googlemaps": "^2.1.1",
     "cordova-plugin-pdialog": "^2.0.1",
     "cordova-plugin-progress": "^0.3.0",
+    "cordova-plugin-splashscreen": "^4.0.3",
     "cordova-plugin-whitelist": "1"
   }
 }

@@ -83,6 +83,10 @@
             {
               "xml": "<feature name=\"PDialog\"><param name=\"android-package\" value=\"io.github.pwlin.cordova.plugins.pdialog.PDialog\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -189,6 +193,9 @@
       "PACKAGE_NAME": "com.ezartech.demo.cities"
     },
     "cordova-plugin-progress": {
+      "PACKAGE_NAME": "com.ezartech.demo.cities"
+    },
+    "cordova-plugin-splashscreen": {
       "PACKAGE_NAME": "com.ezartech.demo.cities"
     }
   },
@@ -457,6 +464,14 @@
       "clobbers": [
         "progress"
       ]
+    },
+    {
+      "id": "cordova-plugin-splashscreen.SplashScreen",
+      "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+      "pluginId": "cordova-plugin-splashscreen",
+      "clobbers": [
+        "navigator.splashscreen"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -469,6 +484,7 @@
     "cordova-plugin-ezar-snapshot": "1.0.0",
     "cordova-plugin-googlemaps": "2.1.1",
     "cordova-plugin-pdialog": "2.0.1",
-    "cordova-plugin-progress": "0.3.0"
+    "cordova-plugin-progress": "0.3.0",
+    "cordova-plugin-splashscreen": "4.0.3"
   }
 }
