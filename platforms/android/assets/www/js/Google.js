@@ -117,7 +117,7 @@ function calculateDirection(degree) {
                 fontSize = "30";
                 fontColor = "#eee";
             }
-            $("#spot").append('<div class="name" data-id="' + i + '" style="margin-left:' + (((pin[i].bearing - degree) * 5) + 50) + 'px;width:' + ($(window).width() - 100) + 'px;font-size:' + fontSize + 'px;color:' + fontColor + '">' + pin[i].name + '<div class="distance">' + away + ' m�tre(s) de distance</div></div>');
+            $("#spot").append('<div class="name" data-id="' + i + '" style="margin-left:' + (((pin[i].bearing - degree) * 5) + 50) + 'px;width:' + ($(window).width() - 100) + 'px;font-size:' + fontSize + 'px;color:' + fontColor + '">' + pin[i].name + '<div class="distance">' + away + ' mètre(s) de distance</div></div>');
             detected = 1;
         } else {
             if (!detected) {
