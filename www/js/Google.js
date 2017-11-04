@@ -29,6 +29,7 @@ function callback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
         pin = [];
         $(".listItems").html("");
+        clearMarkers();
         for (i = 0; i < results.length; i++) {
             //var place = result[i];
             var data = { "name": "" + results[i].name + "", "lat": "" + results[i].geometry.location.lat() + "", "lng": "" + results[i].geometry.location.lng() + "" };
@@ -38,8 +39,8 @@ function callback(results, status) {
         // Fermeture fenetre de chargement
         cordova.plugin.pDialog.dismiss();
     }
-    //else
-        //alert("Google Search initialization failed");
+    else
+        alert("Google Search initialization failed");
 }
 
 // get data from API and store in array, add to list view and create markers on map, calculate
