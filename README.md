@@ -4,7 +4,6 @@
 [![NPM Version][npm-image]][npm-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 
-One to two paragraph statement about your product and what it does.
 
 ![](header.png)
 
@@ -35,29 +34,34 @@ Réalisé avec Cordova 7.1.0.
 npm install -g cordova
 ```
 
-## Release History
+Utilisation de l'API Google Maps
+Plugin de géolocalisation
 
-* 0.1.1
-    * FIX: Problème de refresh
-* 0.1.0
-    * Récuperation et affichage des points de tabac
-* 0.0.1
-    * Implémentation
+## Fonctionalité
+
+* Recherche des bureaux de tabac a proximité
+* Affichage en Réalité augmentée avec le module ezAR
+* Guidage en temps réel
+* Choix de la zone de recherche
+
+## Explication
+
+* Recherche de la position de l'utilisateur
+* Lancement d'une requete via Google API
+* Parsing des resultats dans objets dynamique
+* Affichage des resultats, en passant par des fonctions de calcul pour pouvoir les afficher correctement en réalité augmentée (ezAR)
+* Parametrage simple des resultats obtenu par l'utilisateur
+
+* Pour toutes questions contactez-nous ^^
 
 ## Meta
 
-Nabil Abbach – [@NabilAbbach](https://twitter.com/dbader_org) – nabil.abbach@epitech.eu
+Groupe de travail n°
+
+Nabil Abbach – [@NabilAbbach](https://twitter.com/dbader_org) – nabil.abbach@epitech.eu 
 Olivier laffon - [@iLLoDev](https://twitter.com/dbader_org) - olivier.laffon@epitech.eu
-Aymeric Gand - aymeric.gand@epitech.eu
+Aymeric Gand - aymeric.gand@epitech.eu (n'a pas participé au cours)
 
-
-## Contributing
-
-1. Fork it (<https://github.com/yourname/yourproject/fork>)
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
-4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request
 
 <!-- Markdown link & img dfn's -->
 [npm-image]: https://img.shields.io/npm/v/cordova.svg?style=flat-square
