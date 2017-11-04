@@ -70,6 +70,23 @@
             /*cordova.plugin.pDialog.setMessage('Loading Data...');
             StartData();*/
         }
+
+        /*function toggleView() {
+            if ($(".listView").is(":visible")) {
+                $(".listView").hide();
+                $("#map").height($(window).height() - 60);
+                $(".mapView").fadeIn(
+                    function () {
+                        google.maps.event.trigger(map, "resize");
+                        map.fitBounds(bounds);
+                    });
+                $("#viewbtn").html("List");
+            } else {
+                $(".mapView").hide();
+                $(".listView").fadeIn();
+                $("#viewbtn").html("Map");
+            }
+        }*/
     </script>
 </head>
 <body id="body" style="background-color: transparent">
@@ -99,10 +116,6 @@
         </div>
         <div class="mapView">
             <div id="map"></div>
-        </div>
-        <div class="SetupView">
-            <div class="Radius"></div>
-            <div class="Color"></div>
         </div>
     </div>
     <div id="debug">
