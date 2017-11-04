@@ -24,8 +24,8 @@ function onGeoSuccess(position) {
     latlng = new google.maps.LatLng(myLat, myLng);
     cordova.plugin.pDialog.setProgress(60);
 
-    range = 800;
-    StartData(range);
+    //range = 800;
+    StartData();
 }
 
 // onError: Failed to get the location

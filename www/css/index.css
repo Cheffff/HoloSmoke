@@ -76,7 +76,11 @@ body {
 }
 
 .mapView {
-    display: none
+    display: none;
+}
+
+.SetupView {
+    display: none;
 }
 
 #map {

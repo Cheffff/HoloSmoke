@@ -17,7 +17,7 @@ function setupMap() {
     map = new google.maps.Map(document.getElementById("map"), mapOptions);
 }
 
-function StartData(range) {
+function StartData() {
     cordova.plugin.pDialog.setMessage('Loading Data...');
     var request = { location: latlng, radius: range, name: ['tabac'] };
     var service = new google.maps.places.PlacesService(map);

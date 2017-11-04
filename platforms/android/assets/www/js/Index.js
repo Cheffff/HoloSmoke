@@ -1,6 +1,6 @@
-﻿function toggleView() {
+﻿/*function toggleView() {
     if ($(".listView").is(":visible")) {
-        $(".listView").hide();
+        $(".listView").hide();       
         $("#map").height($(window).height() - 60);
         $(".mapView").fadeIn(
             function () {
@@ -13,9 +13,10 @@
         $(".listView").fadeIn();
         $("#viewbtn").html("Map");
     }
-}
+}*/
 
-/*function toggleView() {
+
+function toggleView() {
     if ($(".listView").is(":visible")) {
         $(".listView").hide();
         $(".SetupView").hide();
@@ -29,13 +30,20 @@
     }
     else if ($(".mapView").is(":visible")) {
         $(".mapView").hide();
-        $(".listView").hide();
+        $(".listView").hide();        
         $(".SetupView").fadeIn();
         $("#viewbtn").html("List");
     }
     else {
         $(".SetupView").hide();
+        $(".mapView").hide();
         $(".listView").fadeIn();
         $("#viewbtn").html("Map");
     }
-}*/
+}
+
+function radius() {
+    var x = document.getElementById("myRange").value;
+   // document.getElementById("demo").innerHTML = Math.round(x);
+   range = Math.round(x);
+}

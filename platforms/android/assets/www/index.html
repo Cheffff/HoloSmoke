@@ -35,6 +35,8 @@
         var dataStatus = 0;
         var latlng;
 
+        var range;
+
         // setup map and listen to deviceready
         $(document).ready(function () {
             document.addEventListener("deviceready", onDeviceReady, false);
@@ -72,6 +74,7 @@
             StartData();*/
         }
     </script>
+    <link rel="stylesheet" type="text/css" href="css/index.css">   
 </head>
 <body id="body" style="background-color: transparent">
     <div id="arView" style="background-color: transparent">
@@ -100,6 +103,11 @@
         </div>
         <div class="mapView">
             <div id="map"></div>
+        </div>
+        <div class="SetupView">
+            <div class="Radius">
+                <input type="range" min="100" max="900" step="any" id="myRange" onclick="radius()">
+            </div>
         </div>
     </div>
     <div id="debug">
