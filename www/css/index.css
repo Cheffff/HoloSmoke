@@ -183,7 +183,7 @@ body {
 .name {
     padding: 15px;
     font-weight: bold;
-    background-color: rgba(204,34,34,0.5);
+    background-color: rgba(65,214,244,0.5);
     border-radius: 40px;
     margin-bottom: 10px
 }
@@ -194,7 +194,7 @@ body {
     padding: 15px;
     font-weight: bold;
     ;
-    background-color: #a22;
+    background-color: #42b9f4;
     border-radius: 40px;
     display: inline-block;
     margin-bottom: 10px;
