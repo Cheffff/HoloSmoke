@@ -22,6 +22,7 @@
     <script type="text/javascript" src="js/Geolocation.js"></script>
     <script type="text/javascript" src="js/Compass.js"></script>
     <script type="text/javascript" src="js/Accelerometer.js"></script>
+    <script type="text/javascript" src="js/Index.js"></script>
 
     <script src="lib/jquery/jquery-1.8.2.min.js"></script>
     <script src="cordova.js"></script>
@@ -70,23 +71,6 @@
             /*cordova.plugin.pDialog.setMessage('Loading Data...');
             StartData();*/
         }
-
-        /*function toggleView() {
-            if ($(".listView").is(":visible")) {
-                $(".listView").hide();
-                $("#map").height($(window).height() - 60);
-                $(".mapView").fadeIn(
-                    function () {
-                        google.maps.event.trigger(map, "resize");
-                        map.fitBounds(bounds);
-                    });
-                $("#viewbtn").html("List");
-            } else {
-                $(".mapView").hide();
-                $(".listView").fadeIn();
-                $("#viewbtn").html("Map");
-            }
-        }*/
     </script>
 </head>
 <body id="body" style="background-color: transparent">
