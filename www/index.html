@@ -105,7 +105,18 @@
         </div>
         <div class="SetupView">
             <div class="Radius">
-                <input type="range" min="100" max="1000" step="100" value="500" id="myRange" onchange="radius()">
+                <h2><center>Définissez le rayon de recherche</center></h2>
+                <input id ="range" class="range_css" type="range" min="100" max="1000" step="100" value="500" id="myRange" onchange="radius()">
+                <br>
+                <script>
+                    $(function(){
+                        $("#range").after('<h3><center><output></output>m</center></h3>');
+                        $("#range").live('change', function(){
+                            var valof = $(this).val();
+                            $('output').text(valof);
+                        });
+                    });
+                </script>
             </div>
         </div>
     </div>
