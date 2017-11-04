@@ -25,6 +25,15 @@
 }
 
 function radius() {
-    var x = document.getElementById("myRange").value;
+    var x = document.getElementById("range").value;
     range = Math.round(x);
+}
+
+function initRadius() {
+    alert("Test");
+    $("#range").after('<h3><center><output></output>m</center></h3>');
+    $("#range").live('change', function () {
+        var valof = $(this).val();
+        $('output').text(valof);
+    });
 }
