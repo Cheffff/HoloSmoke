@@ -17,11 +17,12 @@ function setupMap() {
     map = new google.maps.Map(document.getElementById("map"), mapOptions);
 }
 
-/*function StartData() {
-    var request = { location: latlng, radius: '500', name: ['tabac'] };
+function StartData(range) {
+    cordova.plugin.pDialog.setMessage('Loading Data...');
+    var request = { location: latlng, radius: range, name: ['tabac'] };
     var service = new google.maps.places.PlacesService(map);
     service.search(request, callback);
-}*/
+}
 
 function callback(results, status) {
     // Modification du tableau
