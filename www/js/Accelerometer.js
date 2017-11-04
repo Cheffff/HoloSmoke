@@ -1,4 +1,4 @@
-/*
+﻿/*
  * ACCELEROMETER API
 */
 
