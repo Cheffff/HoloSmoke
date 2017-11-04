@@ -1,14 +1,12 @@
 {
-  "name": "com.ezartech.demo.cities",
-  "version": "1.0.0",
-  "displayName": "citiesAR",
+  "name": "com.holosmoke",
+  "version": "0.5.0",
+  "displayName": "HoloSmoke",
   "cordova": {
     "platforms": [
       "android"
     ],
     "plugins": {
-      "com.ezartech.ezar.snapshot": {},
-      "com.ezartech.ezar.videooverlay": {},
       "cordova-plugin-device-motion": {},
       "cordova-plugin-device-orientation": {},
       "cordova-plugin-geolocation": {},
@@ -24,8 +22,6 @@
     }
   },
   "dependencies": {
-    "com.ezartech.ezar.snapshot": "/dev/ezar/plugins/com.ezartech.ezar.snapshot",
-    "com.ezartech.ezar.videooverlay": "/dev/ezar/plugins/com.ezartech.ezar.videoOverlay",
     "cordova-android": "^6.2.3",
     "cordova-plugin-device-motion": "~1.2.2",
     "cordova-plugin-device-orientation": "~1.0.4",
