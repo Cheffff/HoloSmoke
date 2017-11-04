@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.ezartech.demo.cities;
+package com.holosmoke;
 
 import android.os.Bundle;
 import org.apache.cordova.*;
